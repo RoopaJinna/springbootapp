@@ -3,7 +3,7 @@ pipeline {
         maven "Maven3"
     }
     agent any
-    environment {
+        environment {
             SCANNER_HOME= tool 'sonar-scanner'
         }
     stages {
