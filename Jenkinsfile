@@ -7,10 +7,6 @@ pipeline {
         environment {
             SCANNER_HOME= tool 'sonar-scanner'
         }
-        environment {
-            ARTIFACTORY_URL = 'https://ncplspringbootapp.jfrog.io'
-            ARTIFACTORY_CREDENTIALS = credentials('jfrogaccess')
-        }
     stages {
         stage ('Checkout from git'){
             steps {
