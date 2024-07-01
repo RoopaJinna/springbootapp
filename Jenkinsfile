@@ -41,14 +41,7 @@ pipeline {
                 }
             }
         }
-        stage ('Build Docker Image'){
-            steps {
-                script {
-                    sh 'docker build -t myrepo .'
-                }
-            }
-        }  
-         stage("Jar Publish") {
+        stage("Jar Publish") {
             steps {
                 script {
                         echo '<--------------- Jar Publish Started --------------->'
@@ -73,5 +66,12 @@ pipeline {
                 }
             }   
         } 
+        stage ('Build Docker Image'){
+            steps {
+                script {
+                    sh 'docker build -t myrepo .'
+                }
+            }
+        }  
     }
 }
