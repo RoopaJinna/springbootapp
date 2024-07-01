@@ -57,7 +57,7 @@ pipeline {
                          def uploadSpec = """{
                               "files": [
                                 {
-                                  "pattern": "target/springbootApp.jar",
+                                  "pattern": "target/springbootapp.jar",
                                   "target": "ncplmaven-libs-release",
                                   "flat": "false",
                                   "props" : "${properties}",
